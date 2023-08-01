@@ -7,14 +7,14 @@ import {
     Navigate
 } from "react-router-dom"
 
-import { AuthProvider } from "./contexts/auth";
+import { AuthContext, AuthProvider } from "./contexts/auth";
 
 import LoginPage from "./pages/LoginPage";
 import MainPage from "./pages/MainPage";
 
 const AppRoutes = () => {
     const Private = ({ children }) => {
-        const { authenticated , loading } = useContext(AuthProvider);
+        const { authenticated , loading } = useContext(AuthContext);
 
         if(loading){
             return <div className="loading">Caregando...</div>

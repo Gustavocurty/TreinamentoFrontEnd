@@ -12,6 +12,7 @@ import { getRepositories, createRepository, destroyRepository } from "../../serv
 import "./style.css"
 
 
+
 const MainPage = () => {
     const { user, logout } = useContext(AuthContext);
     const [repositories, setRepositories] = useState([]);

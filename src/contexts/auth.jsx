@@ -49,7 +49,7 @@ export const AuthProvider = ({ children }) => {
             value = {{
                 authenticated: !!user, 
                 user,
-                loading,
+                setLoading,
                 login,
                 logout
             }}>
