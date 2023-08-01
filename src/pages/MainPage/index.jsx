@@ -11,8 +11,6 @@ import { getRepositories, createRepository, destroyRepository } from "../../serv
 
 import "./style.css"
 
-
-
 const MainPage = () => {
     const { user, logout } = useContext(AuthContext);
     const [repositories, setRepositories] = useState([]);
@@ -47,7 +45,7 @@ const MainPage = () => {
 
     const handleDeleteRepo = async (repository) => {
         console.log('delete repo', repository);
-        await destroyRepository(user?.id, repository._id);
+        await destroyRepository(repository.userId, repository._id);
         await loadData();
     }
 
